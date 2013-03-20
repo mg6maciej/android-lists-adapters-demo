@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/button_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/bottom"
+        android:layout_alignTop="@+id/top"
+        android:background="@android:drawable/menuitem_background"
+        android:nextFocusLeft="@+id/button_delete"
+        android:nextFocusRight="@+id/button_reply" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/top"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/button_reply"
+        android:layout_toRightOf="@+id/image"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/bottom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:layout_toLeftOf="@+id/button_reply"
+        android:layout_toRightOf="@+id/image"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/button_reply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/button_delete"
+        android:nextFocusLeft="@+id/button_item"
+        android:text="Reply" />
+
+    <Button
+        android:id="@+id/button_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:nextFocusRight="@+id/button_item"
+        android:text="Delete" />
+
+</RelativeLayout>
